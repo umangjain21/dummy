@@ -1,0 +1,29 @@
+#!/bin/csh
+
+# Function to determine if a given date is a weekend (Saturday or Sunday)
+is_weekend() {
+    set day_of_week = `date -j -f "%Y-%m-%d" "$1" "+%u"`
+    return $day_of_week > 5
+}
+
+# Function to calculate the last working day in the previous quarter
+get_last_working_day_in_previous_quarter() {
+    # Get the current date
+    set current_date = `date "+%Y-%m-%d"`
+
+    # Calculate the previous quarter
+    set previous_quarter = `date -j -v-3m -f "%Y-%m-%d" "$current_date" "+%Y-%m-%d"`
+
+    # Get the last day of the previous quarter
+    set last_day_previous_quarter = `date -j -v-1d -f "%Y-%m-%d" "$previous_quarter" "+%Y-%m-%d"`
+
+    # Find the last working day (excluding weekends)
+    while (is_weekend "$last_day_previous_quarter")
+        set last_day_previous_quarter = `date -j -v-1d -f "%Y-%m-%d" "$last_day_previous_quarter" "+%Y-%m-%d"`
+    end
+
+    echo "Last working day in the previous quarter: $last_day_previous_quarter"
+}
+
+# Call the function to get the last working day in the previous quarter
+get_last_working_day_in_previous_quarter
