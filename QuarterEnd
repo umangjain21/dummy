@@ -79,3 +79,5 @@ Linked Partition
 Though this is called as a partition technique, it does not provide the generic partitioning capabilities. 
 This basically provides a link to other databases (using XREF) and based on the mapping done while creating the partition,
 this partition provides the capability to drill from one cell in a source database to another cell in the target database. 
+
+date "+%Y-%m-%d %H:%M:%S"
