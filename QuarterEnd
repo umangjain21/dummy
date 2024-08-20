@@ -1,134 +1,28 @@
-An outline (also known as database outline) define the database design in a tree structure which define :
-
-dimension
-member
-consolidations
-formulas and calculations scripts
-aliases,
-properties,
-types,
-relationship among Dimensions (Dimension-Member Structure)
-mathematical relationships
-
-
-Dimension:
-
-A dimension represents the highest consolidation level in the database outline. The database outline presents dimensions and members in a tree structure to indicate a hierarchy relationship.
-
-For example, below, Hierarchical Structure:
-
-Year, Accounts, Scenario, Product are a dimension
-Qtr1 is a member of the Dimension Year (of type Time)
-
-Dimension contain Member, which you can nest inside of other members in a Hierarchies.
-
-Hierarchies also define the relationship that users see during analytic operations.
-
-Members that consist of other members define consolidations levels in the dimension hierarchy.
-
-Rules Files:
-
-A rules files tells Essbase what changes to make to :
-
-the data source to load
-and the outline to build
-
-during :
-
-a data load
-or a dimension build.
-
---
-Outline build rules file:
-
-When you create dimension with thousands of member or with many alternate hierarchy, you want to automate the process to add the member.
-
-You use Dimension build rules files to map dimension and member from a data source to an Essbase outline.
-
-During dimension building, the Rules files tells Essbase how to build the hierarchy and how to transform member before loading them.
-
-When you execute a dimension build, Essbase :
-
-reads the member in the data source
-change them based on the rules in the rules files
-and load the changed member into the outline
-
-
-DATALOAD:
-
-Data Load Rules file is the type of rules files which is involved in the data load process.
-
-A data source for data load must contain :
-
-not only the values that you want to load
-but also identification of the location to which Essbase should load the values: a data address that includes one member from every standard dimension in your outline.
-In addition to mapping metadata in data source to your dimension, rules files enable you to transform data upon loading in the following way :
-
-scale data
-change the sign of data
-Overwrite, add to, or subtract from existing data
-
-Partitions:
-
-Basically Essbase supports 3 types of partitions.
-
-Transparent Partition
-Replicated Partition
-Linked Partition
- Linked partitions:
-Though this is called as a partition technique, it does not provide the generic partitioning capabilities. 
-This basically provides a link to other databases (using XREF) and based on the mapping done while creating the partition,
-this partition provides the capability to drill from one cell in a source database to another cell in the target database. 
-
-date "+%Y-%m-%d %H:%M:%S"
-
-
-
-Subject: Request for Four Weeks Work From Home Due to Mental Health and Family Care
-
-Dear [Supervisor/Manager's Name],
-
-I hope this email finds you well. I am writing to discuss a matter that is important to me and, I believe, crucial for maintaining my overall well-being and productivity at work.
-
-Over the past few weeks, I have been facing challenges related to my mental health and family care responsibilities. In order to address these issues and ensure that I can continue to contribute effectively to the team, I am requesting the opportunity to work from home for the next four weeks.
-
-I want to assure you that I remain committed to fulfilling my responsibilities and meeting deadlines during this period. Working from home will allow me to create a more supportive and comfortable environment, enabling me to better manage my mental health and attend to family matters as needed.
-
-I am more than willing to discuss a plan for maintaining open communication with the team during this period, and I am committed to ensuring that all work is completed to the best of my ability. I am also open to providing any necessary documentation, such as a medical certificate or any other form of verification, to support this request.
-
-I understand the importance of maintaining a strong work ethic and delivering results, and I believe that this temporary adjustment will ultimately contribute to my ability to perform at my best. I am confident that, with your support, I can navigate through these challenges and return to the office fully recharged and ready to contribute positively.
-
-I am available at your earliest convenience to discuss this matter further and to address any concerns you may have. I appreciate your understanding and consideration in this matter.
-
-Thank you for your time and support.
-
-Sincerely,
-
-[Your Full Name]
-[Your Position]
-[Your Contact Information]
-
-
-If we have something like a org tree of a company where we have tree like structure which represents the total number of employees directly reporting to him and then if we scroll further each branch further expands to the employees reporting to the current employee and so on. Question was to find the total number of direct repotees of a given manager. (Not the total employees under him but the direct ones).
-
-It was a N-ary tree problem and I gave the solution. It followed by question of finding common manager of two employees in this tree. Again we discussed the approach.
-
-The final problem was that we are given weights to each node of this tree. We need to find the branch of the tree with minimum weights with the condition that if we choose a node for the weight sum, we cannot choose its immediate children or parent (basically any directly connected node)
-
-We discussed the optimal approach to this problem and later on I coded this solution.
-
-
-Dear [Manager's Name],
-
-I hope this email finds you well. I am writing to formally submit my resignation from my position at [Company Name]. As we discussed on 26th July, I would like to confirm that my resignation date is 26th July 2024, with my last working day being 27th August 2024.
-
-I want to express my gratitude for the opportunities I’ve had during my time here, and I appreciate all the support and guidance you have provided.
-
-Please let me know how I can assist during this transition period. I am committed to ensuring a smooth handover of my responsibilities.
-
-Thank you once again for the opportunity to be part of the team. I wish the company continued success in the future.
-
-Best regards,
-Umang Jain
-[Your Job Title]
-[Your Contact Information]
+28 Jan: all days wfo
+4 Feb: all days wfo
+11 Feb: all day wfo
+18 Feb: all day wfo
+25 Feb: all day wfo
+3 Mar: 26th sick leave, 28th and 1st wfh, rest all wfo
+10 Mar: all day wfo
+17 Mar: Sick leave all days
+24 Mar: Sick leave all days
+31 Mar: Sick leave all days
+7 Apr: Sick leave all days
+14 Apr: Sick leave all days
+21 Apr: Sick leave all days
+28 Apr: Sick leave all days
+5 May: Sick leave all days
+12 May: Sick leave all days
+19 May: all wfo
+26 May: all wfo
+2 Jun: all wfo
+9 Jun: 3rd june wfh, 5th jun half day sick leave, rest all wfo
+16 Jun: 10th june half day ooo and half day wfh, rest all days wfo
+23 Jun: 20 jun wfh, rest all days wfo
+30 Jun: 25th june sick leave , rest all days wfo
+7 Jul: 1/2/3 july wfo, 4th july sick leave, 5th wfh
+14 Jul: all wfh except 16th july(in office)
+21 Jul:  all wfh
+28 Jul: all wfh
+4 Aug: 31st wfh, rest all wfo
